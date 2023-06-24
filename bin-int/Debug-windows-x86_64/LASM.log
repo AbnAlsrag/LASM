@@ -1,0 +1,12 @@
+﻿  main.c
+E:\HALM games studio\LOMA Project\LASM\src\main.c(58,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(61,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(66,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(73,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(78,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(85,74): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(219,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(222,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(229,72): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\src\main.c(215): warning C4172: returning address of local variable or temporary: program
+  LASM.vcxproj -> E:\HALM games studio\LOMA Project\LASM\bin\Debug-windows-x86_64\LASM.exe
