@@ -1,0 +1,17 @@
+#HELLO, SHIT!\n
+
+jmp main
+
+func:
+	push 5
+	push 5
+	push 5
+	add
+	swap 1
+	swap 0
+	return
+
+main:
+	call func
+	sub
+	hlt
