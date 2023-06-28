@@ -1,0 +1,29 @@
+﻿  LASM.c
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(426,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(429,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(436,72): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(450,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(453,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(458,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(465,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\external\LVM\src\LVM.h(470,68): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(39,15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(42,63): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(47,63): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(54,63): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(59,63): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(66,69): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(91,25): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(130,25): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(141,11): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(157,11): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(170,11): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(211,11): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(235,11): warning C4018: '<': signed/unsigned mismatch
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(246,30): warning C4244: 'function': conversion from 'uint64_t' to 'double', possible loss of data
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(247,26): warning C4244: 'function': conversion from 'uint64_t' to 'double', possible loss of data
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(263,50): warning C4090: 'function': different 'const' qualifiers
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(264,11): warning C4244: 'return': conversion from 'uint64_t' to 'int32_t', possible loss of data
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(293,34): warning C4090: 'function': different 'const' qualifiers
+E:\HALM games studio\LOMA Project\LASM\LASM\src\LASM.c(314,68): warning C4090: 'function': different 'const' qualifiers
+  LASM.vcxproj -> E:\HALM games studio\LOMA Project\LASM\bin\-windows-x86_64\LASM\LASM.exe

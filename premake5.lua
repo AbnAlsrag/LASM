@@ -22,6 +22,10 @@ workspace "LASM"
             "%{prj.name}/src/**.h",
             "%{prj.name}/src/**.c",
         }
+
+        includedirs {
+            "external/LVM/src"
+        }
         
         filter "system:windows"
             systemversion "latest"
@@ -57,6 +61,10 @@ workspace "LASM"
         files {
             "%{prj.name}/src/**.h",
             "%{prj.name}/src/**.c"
+        }
+
+        includedirs {
+            "external/LVM/src"
         }
 
         filter "system:windows"
