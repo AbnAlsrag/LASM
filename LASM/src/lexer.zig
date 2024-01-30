@@ -7,6 +7,7 @@ pub const Lexer = struct {
         num,
         comma,
         colon,
+        new_line,
         eof,
     };
 
@@ -49,7 +50,10 @@ pub const Lexer = struct {
                 self.shopWhiteSpace();
             }
 
-            if (isAlpha(self.buffer[self.current])) {
+            if (self.buffer[self.current] == '\n') {
+                self.current += 1;
+                result = Token.init(.new_line, "");
+            } else if (isAlpha(self.buffer[self.current])) {
                 result = self.parseAlpha();
             } else if (isNum(self.buffer[self.current])) {
                 result = self.parseNum();
@@ -58,7 +62,7 @@ pub const Lexer = struct {
                 result = Token.init(.comma, ",");
             } else if (self.buffer[self.current] == ':') {
                 self.current += 1;
-                result = Token.init(.comma, ":");
+                result = Token.init(.colon, ":");
             }
         }
 
@@ -73,7 +77,7 @@ pub const Lexer = struct {
 
     fn parseAlpha(self: *Lexer) Token {
         const begin: usize = self.current;
-        while (self.current < self.buffer.len and !isWhiteSpace(self.buffer[self.current])) {
+        while (self.current < self.buffer.len and !isWhiteSpace(self.buffer[self.current]) and isAlpha(self.buffer[self.current])) {
             self.current += 1;
         }
 
@@ -99,7 +103,7 @@ pub const Lexer = struct {
 
     fn isWhiteSpace(char: u8) bool {
         switch (char) {
-            ' ', '\t', '\r', '\n', 11, 12 => return true,
+            ' ', '\t', '\r', 11, 12 => return true,
             else => return false,
         }
     }
