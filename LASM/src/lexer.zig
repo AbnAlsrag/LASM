@@ -47,7 +47,11 @@ pub const Lexer = struct {
             result = Token.init(.eof, "");
         } else {
             if (isWhiteSpace(self.buffer[self.current])) {
-                self.shopWhiteSpace();
+                self.chopWhiteSpace();
+            }
+
+            if (self.buffer[self.current] == '#') {
+                self.chopComment();
             }
 
             if (self.buffer[self.current] == '\n') {
@@ -69,8 +73,27 @@ pub const Lexer = struct {
         return result;
     }
 
-    fn shopWhiteSpace(self: *Lexer) void {
+    pub fn expectToken(self: *Lexer, token: TokenType) bool {
+        const current = self.current;
+
+        const tok = self.nexToken();
+
+        self.current = current;
+        if (tok.type == token) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    fn chopWhiteSpace(self: *Lexer) void {
         while (self.current < self.buffer.len and isWhiteSpace(self.buffer[self.current])) {
+            self.current += 1;
+        }
+    }
+
+    fn chopComment(self: *Lexer) void {
+        while (self.current < self.buffer.len and self.buffer[self.current] != '\n') {
             self.current += 1;
         }
     }

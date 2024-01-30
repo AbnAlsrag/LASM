@@ -1,6 +1,8 @@
+#This is a comment
 jmp main
 
-main:
+main: #Another comment
+    #TODO: This is a todo
     pushi 5
     pushi 1
     pop r4
