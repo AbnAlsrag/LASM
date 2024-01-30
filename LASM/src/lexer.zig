@@ -6,6 +6,7 @@ pub const Lexer = struct {
         register,
         num,
         comma,
+        colon,
         eof,
     };
 
@@ -55,6 +56,9 @@ pub const Lexer = struct {
             } else if (self.buffer[self.current] == ',') {
                 self.current += 1;
                 result = Token.init(.comma, ",");
+            } else if (self.buffer[self.current] == ':') {
+                self.current += 1;
+                result = Token.init(.comma, ":");
             }
         }
 
