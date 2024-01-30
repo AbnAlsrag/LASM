@@ -1,7 +1,9 @@
 const std = @import("std");
+const lvm = @import("lvm");
 
 pub const Lexer = struct {
     pub const TokenType = enum(u8) {
+        inst,
         name,
         register,
         num,
@@ -108,6 +110,8 @@ pub const Lexer = struct {
 
         if (self.buffer[begin..end].len == 2 and self.buffer[begin..end][0] == 'r') {
             return Token.init(.register, self.buffer[begin..end]);
+        } else if (lvm.isInst(self.buffer[begin..end])) |_| {
+            return Token.init(.inst, self.buffer[begin..end]);
         } else {
             return Token.init(.name, self.buffer[begin..end]);
         }
