@@ -1,5 +1,0 @@
-pushi 5
-pushi 1
-pop r4
-pop r0
-hlt
