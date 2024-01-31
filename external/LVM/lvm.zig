@@ -184,7 +184,7 @@ const Output = struct {
     }
 };
 
-const InstDef = struct {
+pub const InstDef = struct {
     type: InstType,
     name: []const u8,
 
@@ -284,6 +284,10 @@ pub fn isInst(name: []const u8) ?InstType {
     }
 
     return null;
+}
+
+pub fn getInstDef(inst_type: InstType) InstDef {
+    return inst_defs_lut[@intFromEnum(inst_type)];
 }
 
 pub const Inst = struct {
