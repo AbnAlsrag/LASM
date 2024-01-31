@@ -678,8 +678,10 @@ pub const Machine = struct {
     //FIXME: rewrite it
     //TODO: add error checking for file loading
     //TODO: add better errors
-    pub fn loadFromFile(self: *Machine, path: []const u8) !void {
-        var file = try std.fs.cwd().openFile(path, .{});
+    pub fn loadFromFile(self: *Machine, path: []const u8) void {
+        var file = std.fs.cwd().openFile(path, .{}) catch {
+            @panic("[ERORR] error while loading program from binary file");
+        };
         defer file.close();
 
         var buf_reader = std.io.bufferedReader(file.reader());

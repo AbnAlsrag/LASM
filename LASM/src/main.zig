@@ -1,7 +1,10 @@
 const std = @import("std");
 const lvm = @import("lvm");
+const Parser = @import("parser.zig").Parser;
+const Program = @import("parser.zig").Program;
 
 const STACK_SIZE = 512;
+const LASM_FILE_MAX_SIZE = 5000;
 
 const Lasm = struct {
     lvm: lvm.Machine,
@@ -13,41 +16,36 @@ const Lasm = struct {
         return result;
     }
 
-    fn deinit(self: *Lasm) void {
-        _ = self;
-    }
-
+    //TODO: Add better errors
     fn parseLasmFile(self: *Lasm, path: []const u8) void {
-        _ = self;
-        _ = path;
-    }
+        var file = std.fs.cwd().openFile(path, .{}) catch {
+            @panic("[ERROR] error while parsing lasm file");
+        };
+        defer file.close();
 
-    fn saveToMelf(self: Lasm, path: []const u8) void {
-        self.lvm.saveToFile(path);
+        var heap = std.heap.HeapAllocator.init();
+        defer heap.deinit();
+
+        const allocator = heap.allocator();
+
+        var buf_reader = std.io.bufferedReader(file.reader());
+        var in_stream = buf_reader.reader();
+
+        const buffer: []u8 = in_stream.readAllAlloc(allocator, LASM_FILE_MAX_SIZE) catch {
+            @panic("[ERROR] error while parsing lasm file");
+        };
+
+        Parser.parse(buffer);
+        _ = self;
+        allocator.free(buffer);
     }
 };
 
-// pub fn main() void {
-//     const in_path = "test.lasm";
-//     const out_path = "test.melf";
-
-//     var lasm: Lasm = Lasm.init();
-//     lasm.parseLasmFile(in_path);
-//     lasm.saveToMelf(out_path);
-// }
-
-const Lexer = @import("lexer.zig").Lexer;
-
-const file = @embedFile("test.lasm");
-
 pub fn main() void {
-    // std.debug.print("{s}\n\n", .{file});
-    var lexer: Lexer = Lexer.init(file);
+    const in_path = "test.lasm";
+    const out_path = "test.melf";
+    _ = out_path;
 
-    var token: Lexer.Token = lexer.nexToken();
-    while (token.type != Lexer.TokenType.eof) {
-        token.print();
-        // std.debug.print("{}", .{lexer.current});
-        token = lexer.nexToken();
-    }
+    var lasm: Lasm = Lasm.init();
+    lasm.parseLasmFile(in_path);
 }
